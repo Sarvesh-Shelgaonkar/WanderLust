@@ -35,7 +35,7 @@ app.get("/listings", async (req, res) => {
     // Fetch all listings from the database
     const allListings = await Listing.find({});
     // Render the 'listings/index' view and pass the data
-    res.render("/listings/index.ejs", { allListings });
+    res.render("listings/index.ejs", { allListings });
 });
 
 // Start the server
