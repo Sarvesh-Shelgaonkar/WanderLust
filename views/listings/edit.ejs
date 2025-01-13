@@ -1,44 +1,43 @@
-<% layout("/layouts/boilerplate.ejs") %>
-<div class="row mt-3">
+<%layout("/layouts/boilerplate.ejs")%>
+<div class="row">
   <div class="col-8 offset-2">
     <br />
-    <h3>Edit your Listing</h3>
+    <h3>Edit listings</h3>
     <form
-      method="POST"
-      action="/listings/<%= listing._id %>?_method=PUT"
+      method="post"
+      action="/listings/<%= listing._id %>?_method=put"
       novalidate
       class="needs-validation"
     >
       <div class="mb-3">
         <label for="title" class="form-label">Title</label>
         <input
-          name="listing[title]"
+          type="text"
           id="title"
           class="form-control"
+          name="listing[title]"
           required
           value="<%= listing.title %>"
-          type="text"
         />
         <div class="valid-feedback">Title looks good!</div>
       </div>
-
       <div class="mb-3">
-        <label for="description" class="form-label">Description</label>
+        <label for="desc" class="form-label">Description</label>
         <textarea
-          name="listing[description]"
           id="desc"
           required
           class="form-control"
+          name="listing[description]"
           value=""
-          required
         >
-          <%= listing.description %></textarea
+<%= listing.description %></textarea
         >
+
         <div class="invalid-feedback">Please enter short description</div>
       </div>
 
       <div class="mb-3">
-        <label for="image" class="form-label">Image Link</label>
+        <label for="img" class="form-label">Image</label>
         <input
           type="text"
           id="img"
@@ -61,6 +60,7 @@
           />
           <div class="invalid-feedback">Price Should be valid</div>
         </div>
+
         <div class="mb-3 col-md-8">
           <label for="country" class="form-label">Country</label>
           <input
@@ -75,7 +75,7 @@
         </div>
       </div>
       <div class="mb-3">
-        <label for="location" class="form-label">Location</label>
+        <label for="loc" class="form-label">Location</label>
         <input
           type="text"
           id="loc"
@@ -86,11 +86,9 @@
         />
         <div class="invalid-feedback">Location should be valid</div>
       </div>
-     
-      <div class="mb-3">
-        <button type="submit" class="btn btn-dark edit-btn mt-3">Edit</button>
-      </div>
       <br /><br />
+      <button class="btn btn-dark edit1-btn mt-3">Edit</button>
     </form>
   </div>
 </div>
+<script src="/js/script.js"></script>
