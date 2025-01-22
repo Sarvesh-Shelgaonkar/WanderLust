@@ -52,7 +52,7 @@ async function main() {
 
 app.get("/",(req,res)=>
 {
-    res.send("hei i am rooot");
+    res.send("hii i am rooot");
 });
 app.use(session(sessionOption));
 app.use(flash());
@@ -65,7 +65,7 @@ passport.deserializeUser(User.deserializeUser());
 
 app.use((req,res,next)=>
 {
-    res.locals.success=req.flash("success");
+    res.locals.success=req.flash("success");//array hai
     res.locals.failure=req.flash("error");
     next();
 
