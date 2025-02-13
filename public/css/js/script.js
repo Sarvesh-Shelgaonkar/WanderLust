@@ -1,4 +1,3 @@
-// Example starter JavaScript for disabling form submissions if there are invalid fields
 (() => {
   'use strict'
 
@@ -17,35 +16,35 @@
     }, false)
   })
 })()
-  const titleField=document.getElementById('title');
-  const priceField=document.getElementById("price");
-  const countryField=document.getElementById('country')
-  const locField=document.getElementById('loc')
-  titleField.addEventListener('keypress',(event)=>
+const titleField=document.getElementById('title');
+const priceField=document.getElementById("price");
+const countryField=document.getElementById('country')
+const locField=document.getElementById('loc')
+titleField.addEventListener('keypress',(event)=>
+  {
+    if(event.key>='0' && event.key<='9')
     {
-      if(event.key>='0' && event.key<='9')
-      {
-        event.preventDefault();
-      }
-    })
-  countryField.addEventListener('keypress',(event)=>
+      event.preventDefault();
+    }
+  })
+countryField.addEventListener('keypress',(event)=>
+  {
+    if(event.key>='0' && event.key<='9')
     {
-      if(event.key>='0' && event.key<='9')
-      {
-        event.preventDefault();
-      }
-    })
-  locField.addEventListener('keypress',(event)=>
+      event.preventDefault();
+    }
+  })
+locField.addEventListener('keypress',(event)=>
+  {
+    if(event.key>='0' && event.key<='9')
     {
-      if(event.key>='0' && event.key<='9')
-      {
-        event.preventDefault();
-      }
-    })
-  priceField.addEventListener('keypress',(event)=>
+      event.preventDefault();
+    }
+  })
+priceField.addEventListener('keypress',(event)=>
+  {
+    if((event.key>='a' && event.key<='z') ||(event.key>='A' && event.key<='Z') || event.key.length()>5)
     {
-      if((event.key>='a' && event.key<='z') ||(event.key>='A' && event.key<='Z') || event.key.length()>5)
-      {
-        event.preventDefault();
-      }
-    })
+      event.preventDefault();
+    }
+  })

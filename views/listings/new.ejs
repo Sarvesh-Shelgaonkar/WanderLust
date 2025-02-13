@@ -4,8 +4,14 @@
   <div class="col-8 offset-2">
     <br />
     <h3>Create a New Listings</h3>
-    <form action="/listings" method="post" novalidate class="needs-validation">
-      <div class="mb-3">
+    <form
+      action="/listings"
+      method="post"
+      novalidate
+      class="needs-validation"
+      enctype="multipart/form-data"
+    >
+      <div class="mb-3"> 
         <label for="title" class="form-label">Title</label>
         <input
           type="text"
@@ -19,7 +25,7 @@
       </div>
 
       <div class="mb-3">
-        <label for="desc" class="form-label">Description</label>
+        <label for="desc" class="form-label"> description</label>
         <textarea
           required
           name="listing[description]"
@@ -33,7 +39,7 @@
       <div class="mb-3">
         <label for="image" class="form-label">Image link</label>
         <input
-          type="text"
+          type="file"
           id="image"
           class="form-control"
           name="listing[image]"
@@ -51,7 +57,7 @@
             name="listing[price]"
             placeholder="1200"
           />
-          <div class="invalid-feedback">Price should be valid</div>
+          <div class="invalid-feedback">Price Should be valid</div>
         </div>
 
         <div class="mb-3 col-md-8">
@@ -64,7 +70,7 @@
             name="listing[country]"
             placeholder="india"
           />
-          <div class="invalid-feedback">Country name should be valid</div>
+          <div class="invalid-feedback">Country should be valid</div>
         </div>
       </div>
 
@@ -76,7 +82,7 @@
           required
           name="listing[location]"
           id="loc"
-          placeholder="Pune Maharashtra"
+          placeholder="Chh.sabhajinagar,maharashtra"
         />
         <div class="invalid-feedback">Location should be valid</div>
       </div>
@@ -86,4 +92,4 @@
     </form>
   </div>
 </div>
-<!-- <script src="/js/script.js"></script> -->
+<script src="/js/script.js"></script>
